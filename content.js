@@ -6,7 +6,7 @@
   // Set lang to "en" | "zh_CN" | null (auto) to force display language.
   // Set showPanelByDefault to true so the hotkey panel appears on every page load.
   const DEV_CONFIG = {
-    lang: "null",
+    lang: null,
     showPanelByDefault: false,
   };
   // ───────────────────────────────────────────────────────────────

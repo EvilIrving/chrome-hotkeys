@@ -1,7 +1,7 @@
 // ── Developer config ──────────────────────────────────────────
 // Set lang to "en" | "zh_CN" | null (auto) to force display language.
 const DEV_CONFIG = {
-  lang: "null",
+  lang: null,
 };
 // ───────────────────────────────────────────────────────────────
 
@@ -120,6 +120,10 @@ function init() {
       .then(function (r) { return r.json(); })
       .then(function (messages) {
         _messages = messages;
+        load();
+      })
+      .catch(function (err) {
+        console.error("[chrome-keys] failed to load dev lang, falling back to browser locale", err);
         load();
       });
   } else {
